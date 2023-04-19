@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posts</title>
+	<!-- Link Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Posts</h1>
+		<div class="row">
+			<%for(let p of posts){%>
+			
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<img src="/public/<%=p.profile%>" alt="Post 1 Image">
+					<div class="caption">
+						<b><h3><%=p.title%></h3></b>
+						<b><h2><%= p.caption%></h2><b>
+					</div>
+				</div>
+			</div>
+			<%}%>
+		</div>
+	</div>
+	
+	<!-- Link Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
